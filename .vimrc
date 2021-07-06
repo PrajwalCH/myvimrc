@@ -1,26 +1,40 @@
+" enable 24-bit true color
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 syntax on
 filetype plugin indent on
+
+" set line number as well as relative number
 set relativenumber
 set number
+
 set tabstop=2 softtabstop=2
 set shiftwidth=2
 set expandtab
+
 set smartindent
 set autoindent
+
 set smartcase
-set noswapfile
 set incsearch
+set nohlsearch
+
 "set breakindent
 "set formatoptions=l
 set nowrap
-set nohlsearch
+
 set scrolloff=5
+
 set hidden
 set nobackup
-set termguicolors
-set cino=(0
+set noswapfile
+
 set completeopt=menuone,longest
 set shortmess+=c
+
+set cino=(0
 "
 "void
 "function();
@@ -39,7 +53,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'morhetz/gruvbox'
-  Plug 'https://github.com/vim-scripts/AutoComplPop'
+"  Plug 'https://github.com/vim-scripts/AutoComplPop'
 call plug#end()
 
 let g:rainbow_active = 1
@@ -48,8 +62,9 @@ set background=dark
 
 autocmd vimenter * ++nested colorscheme gruvbox
 
-" nnoremap <C-q> :q!<CR>
+nnoremap <C-x> :q!<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <C-w> :wq<CR>
 nnoremap <C-f> :FZF<CR>
 nnoremap <C-b> :Buffer<CR>
+

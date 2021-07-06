@@ -46,7 +46,6 @@ set cino+=t0
 "}
 set cino+=N-s
 
-
 call plug#begin('~/.vim/plugged')
 	Plug 'Townk/vim-autoclose'
 	Plug 'luochen1990/rainbow'

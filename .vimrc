@@ -53,7 +53,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'morhetz/gruvbox'
-"  Plug 'https://github.com/vim-scripts/AutoComplPop'
 call plug#end()
 
 let g:rainbow_active = 1

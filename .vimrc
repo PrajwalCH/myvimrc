@@ -10,15 +10,17 @@ set autoindent
 set smartcase
 set noswapfile
 set incsearch
-set breakindent
-set formatoptions=l
+"set breakindent
+"set formatoptions=l
+set nowrap
 set nohlsearch
 set scrolloff=5
 set hidden
 set nobackup
 set termguicolors
 set cino=(0
-
+set completeopt=menuone,longest
+set shortmess+=c
 "
 "void
 "function();
@@ -33,11 +35,11 @@ set cino+=N-s
 
 call plug#begin('~/.vim/plugged')
 	Plug 'Townk/vim-autoclose'
-	Plug 'mattn/emmet-vim'
 	Plug 'luochen1990/rainbow'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'morhetz/gruvbox'
+  Plug 'https://github.com/vim-scripts/AutoComplPop'
 call plug#end()
 
 let g:rainbow_active = 1
@@ -46,7 +48,7 @@ set background=dark
 
 autocmd vimenter * ++nested colorscheme gruvbox
 
-"nnoremap <C-q> :q!<CR>
+" nnoremap <C-q> :q!<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <C-w> :wq<CR>
 nnoremap <C-f> :FZF<CR>
